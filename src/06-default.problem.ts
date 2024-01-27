@@ -5,7 +5,7 @@ import { z } from "zod";
 
 const Form = z.object({
   repoName: z.string(),
-  keywords: z.array(z.string()).optional(),
+  keywords: z.array(z.string()).default([]), // optional()はデフォルトで空を設定したことでわざわざ指定しなくて良くなる
   //                           ^ 🕵️‍♂️
 });
 
