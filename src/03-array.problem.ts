@@ -15,9 +15,7 @@ export const fetchStarWarsPeople = async () => {
   const data = await fetch(
     "https://www.totaltypescript.com/swapi/people.json",
   ).then((res) => res.json());
-console.log(data)
   const parsedData = StarWarsPeopleResults.parse(data);
-  console.log(parsedData) 
 
   return parsedData.results;
 };
